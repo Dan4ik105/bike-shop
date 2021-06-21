@@ -1,0 +1,25 @@
+@mixin btn($light: false, $large: false) {
+
+  border: 3px solid #000000;
+
+  font-family: Futura PT;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+
+  @if $light {
+    background-color: #F2F2F2;
+    color: #000;
+  }@else{
+    background-color: #000;
+    color: #FFF;
+  }
+  @if $large {
+    width: 300px;
+    height: 52px;
+  }@else{
+    width: 200px;
+    height: 41px;
+  }
+}
