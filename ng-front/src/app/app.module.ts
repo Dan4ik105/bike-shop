@@ -3,11 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MainPageComponent } from './main-page/main-page.component';
-import { MainPageModule } from './main-page/main-page.module';
-import { HeaderComponent } from './shared/components/header/header.component';
+import { MainPageComponent } from './pages/main-page/main-page.component';
+import { MainPageModule } from './pages/main-page/main-page.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material/material.module';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
