@@ -23,3 +23,24 @@
     height: 41px;
   }
 }
+@mixin mainTitle($color: white) {
+  font-family: Futura PT;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 60px;
+
+  @if $color {
+    color: #FFF;
+  }@else{
+    color: #000;
+  }
+
+}
+@mixin title() {
+  font-family: Futura PT;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 31px;
+}

@@ -1,3 +1,4 @@
+@import '../../shared/mixins/mixin.scss';
 .first-block{
   background: url('../../../assets/content.jpg') center no-repeat;
   width: 100%;
@@ -23,36 +24,17 @@
   padding-bottom: 230px;
 }
 .title{
-  font-family: Futura PT;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 31px;
+  @include title()
 }
 .sub-title{
-  font-family: Futura PT;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 64px;
-  line-height: 60px;
-
+  @include mainTitle(white);
   margin-top: 6px;
   margin-bottom: 25px;
 }
 .button-block button{
-  width: 200px;
-  height: 40px;
-  color: #FFFFFF;
-  background: #000;
-
-  border: none;
+  @include btn();
+  @include mainTitle(white);
   cursor: pointer;
-
-  font-family: Futura PT;
-  font-style: normal;
-  font-weight: bold;
   font-size: 18px;
   line-height: 23px;
-
-  vertical-align: bottom;
 }
