@@ -1,6 +1,6 @@
-@import '../../shared/mixins/mixin.scss';
+@import '../../../../shared/mixins/mixin.scss';
 .first-block{
-  background: url('../../../assets/content.jpg') center no-repeat;
+  background: url('../../../../../assets/content.jpg') center no-repeat;
   width: 100%;
   height: 1002px;
   background-size: cover;
@@ -24,7 +24,8 @@
   padding-bottom: 230px;
 }
 .title{
-  @include title()
+  @include title();
+  color: #FFF;
 }
 .sub-title{
   @include mainTitle(white);

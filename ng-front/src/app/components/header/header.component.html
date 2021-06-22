@@ -1,55 +1,67 @@
 <header>
   <div class="container">
     <a routerLink="/" class="logo">
-      <img src="../../assets/logo.svg" alt="logo">
+      <img src="../../../assets/logo.svg" alt="logo">
     </a>
     <div class="input">
       <input type="text">
     </div>
     <div class="header-items">
       <button type="button" class="cart">
-        <img src="../../assets/cart.svg" alt="cart">
+        <img src="../../../assets/cart.svg" alt="cart">
       </button>
 
-      <button type="button" class="menu" (click)="showFiller = true">
-        <img src="../../assets/Menu.svg" alt="menu">
+      <button type="button" class="menu" (click)="showFiller = !showFiller">
+        <img src="../../../assets/Menu.svg" alt="menu">
       </button>
-      <div *ngIf="showFiller" class="menu-drawer">
-        <div class="menu-container">
-          <div class="menu-header">
-            <div class="language">
-              <button class="RU">RU</button>
-              <span>/</span>
-              <button class="EN">EN</button>
-            </div>
-            <button class="cart">
-              <img src="../../assets/cart-dark.svg" alt="cart">
-            </button>
-            <button class="close" type="button" (click)="showFiller = false">
-              <img src="../../../../assets/close.svg" alt="close">
-            </button>
+    </div>
+    <div
+      *ngIf="showFiller"
+      class="menu-drawer"
+      [@exit]="state"
+      >
+      <div class="menu-container">
+        <div class="menu-header">
+          <div class="language">
+            <button class="RU">RU</button>
+            <span>/</span>
+            <button class="EN">EN</button>
           </div>
-          <div class="categorys">
-            <a class="category" href="">ROAD SERIES</a>
-            <a class="category" href="">STREET SERIES</a>
-            <a class="category" href="">MOUNTAIN SERIES</a>
+          <button class="cart">
+            <img src="../../../assets/cart-dark.svg" alt="cart">
+          </button>
+          <button class="close" type="button" (click)="showFiller = !showFiller">
+            <img src="../../../assets/close.svg" alt="close">
+          </button>
+        </div>
+        <div class="categorys">
+          <div class="category">
+            <a href="">ROAD SERIES</a>
           </div>
-          <div class="links">
-            <a class="link" href="">Новости</a>
-            <a class="link" href="">О нас</a>
-            <a class="link" href="">Контакты</a>
+          <div class="category">
+            <a href="">STREET SERIES</a>
           </div>
-          <div class="social-links">
-            <a href="">
-              <img src="" alt="inst">
-            </a>
-            <a href="">
-              <img src="" alt="facebook">
-            </a>
+          <div class="category">
+            <a href="">MOUNTAIN SERIES</a>
           </div>
         </div>
+        <div class="links">
+          <div class="link">
+            <a href="">Новости</a>
+          </div>
+          <div class="link">
+            <a  href="">О нас</a>
+          </div>
+          <div class="link">
+            <a  href="">Контакты</a>
+          </div>
+        </div>
+        <div class="social-link">
+          <a href="">
+            <img src="../../../assets/social-dark.svg" alt="social">
+          </a>
+        </div>
       </div>
-
     </div>
   </div>
   <!-- <mat-drawer-container class="example-container" autosize>

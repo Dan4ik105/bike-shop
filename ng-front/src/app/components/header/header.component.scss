@@ -1,4 +1,4 @@
-@import '../../mixins/mixin.scss';
+@import '../../shared/mixins/mixin.scss';
 header{
   width: 100%;
   height: 90px;
@@ -13,6 +13,7 @@ header{
   box-sizing: border-box;
   padding: 0 20px;
   margin: auto;
+  position: relative;
 }
 header .container{
   display: flex;
@@ -40,40 +41,60 @@ header .container{
   background-color: transparent;
   cursor: pointer;
 }
+.RU, .EN{
+  font-size: 24px;
+  line-height: 31px;
+  @include title();
+}
 .menu-drawer{
   width: 346px;
   height: 550px;
+  background-color: #FFF;
   position: absolute;
   right: 0;
-  background-color: #FFF;
-}
-.menu-container{
   top: 0;
-  box-sizing: border-box;
-  margin: auto;
+}
+
+.menu-container{
+  margin: 0 auto;
   max-width: 206px;
   width: 100%;
   height: 100%;
-  align-items: center;
-  display: block;
 }
-.menu-drawer .menu-container{
-  width: 100%;
-  height: 100%;
 
-}
 .menu-header{
   display: flex;
   justify-content: space-between;
   width: 212px;
-}
 
-.category{
-  margin-top: 7.5px;
-  margin-bottom: 7.5px;
+  margin-top: 74px;
+  margin-bottom: 38px;
+  align-items:center
+}
+.categorys, .links{
+  width: 212px;
+}
+.links{
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+.category, .link{
+  margin: 7.5px 0px;
+}
+.category a{
+  text-decoration: none;
   @include mainTitle(black);
   font-size: 24px;
   line-height: 31px;
+}
+.category a:hover{
+  border-bottom: 1px solid #000000;
+}
+.link a{
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 23px;
+  @include title();
 }
 @media screen and ( max-width: 700px ){
   .logo, .input{

@@ -30,7 +30,7 @@
   font-size: 64px;
   line-height: 60px;
 
-  @if $color {
+  @if ($color == white) {
     color: #FFF;
   }@else{
     color: #000;
@@ -43,4 +43,5 @@
   font-weight: normal;
   font-size: 24px;
   line-height: 31px;
+  color: #000;
 }

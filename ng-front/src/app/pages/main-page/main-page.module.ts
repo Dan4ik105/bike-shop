@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { FirstBlockComponent } from './first-block/first-block.component';
+import { FirstBlockComponent } from './components/first-block/first-block.component';
 
 @NgModule({
   declarations: [
